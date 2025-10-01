@@ -1,0 +1,48 @@
+{
+  "timezone": "Europe/Stockholm",
+  "length": { "target_words": 400, "max_top_stories": 5, "max_other_notables": 8 },
+
+  "topics": {
+    "ai_models": 3.0,
+    "chips_hardware": 2.8,
+    "policy_regulation": 2.6,
+    "safety_governance": 2.4,
+    "enterprise_adoption": 2.0,
+    "robotics_automation": 2.0,
+    "research_breakthroughs": 2.0,
+    "education_skills": 1.2,
+    "general_business": 0.6
+  },
+
+  "watchlist": {
+    "companies": ["OpenAI","NVIDIA","AMD","Intel","TSMC","Apple","Google","Anthropic","Meta","Microsoft","Mistral","xAI","DeepSeek","Cerebras","Arm"],
+    "models": ["GPT","Claude","Gemini","Llama","Mistral","DeepSeek","o4","qwen","phi","mixtral","nemotron","orca","hyperbolic","MoE"]
+  },
+
+  "geography": {
+    "boost_terms": ["EU","Europe","European Commission","Sweden","Stockholm","Nordics","Scandinavia"],
+    "boost": 0.4
+  },
+
+  "sources": {
+    "boost": ["mittechnologyreview.com","ieee.org","nature.com","arxiv.org","ft.com","economist.com","semianalysis.com","tomshardware.com","anandtech.com"],
+    "penalize": ["medium.com","substack.com"], 
+    "boost_weight": 0.3,
+    "penalty_weight": -0.2
+  },
+
+  "exclusions": {
+    "phrases": ["price prediction","giveaway","coupon","sweepstakes","hiring roundup","top 100 tools","crypto airdrop","sponsored"],
+    "max_listicle_count": 12
+  },
+
+  "dedupe": { "window_days": 3, "min_title_similarity": 0.85 },
+
+  "novelty": { "min_new_entities": 1, "weight": 0.5 },
+
+  "output": {
+    "sections": ["Top 5 Stories","Other Notables","Overlaps","One-liners","Sources"],
+    "tone": "crisply analytical; no hype; 1-sentence per Top story",
+    "bullets_style": "•"
+  }
+}
